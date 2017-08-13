@@ -1,0 +1,96 @@
+*{
+    margin: 0;
+    padding: 0;
+}
+@font-face {
+    font-family: myFont;
+    src: url(../font/font.ttf);
+}
+@font-face {
+    font-family: Ralington;
+    src: url(../font/Ralington.otf);
+}
+html, body{
+    background-color: #FFE4E1;
+    width: 100%;
+    height: auto;
+}
+#wrapper{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 100%;
+    padding-top: 10px;
+}
+.title{
+    width: 70%;
+    text-align: center;
+    border-radius: 10px;
+    padding-top: 15px;
+    padding-bottom: 10px;
+    margin-bottom: 10px;
+    font-size: 35pt;
+    color: #ff4081;
+    background-color: #B0E0E6;
+    font-family: Ralington;
+
+
+}
+.addContact{
+    width: 70%;
+    height: auto;
+    background-color:#b39ddb ;
+    padding-left: 5px;
+    padding-right: 5px;
+    font-weight: bold;
+    border-radius: 10px;
+    font-size: 15pt;
+    font-family: myFont;
+
+}
+
+
+.myButton{
+    padding: 10px 30px;
+    margin-top: 10px;
+    margin-bottom: 10px;
+    background-color: #B0E0E6;
+    border-radius: 10px;
+    outline: none;
+    font-family: myFont;
+    font-size: 15pt;
+
+}
+.search{
+    width: 20%;
+    background-color: #FFC0CB;
+    margin-bottom:15px;
+    border-radius: 10px;
+    padding-top: 5px;
+    height:60px;
+    font-weight: bold;
+    font-size: 15pt;
+    font-family: myFont;
+}
+
+table {
+    width: 70%;
+    table-layout: fixed;
+}
+th, td {
+    font-family: myFont;
+    padding: 8px;
+    overflow: auto;
+    text-align: center;
+}
+tr{
+    background-color: #f2f2f2;
+    font-size: 12pt;
+    text-align: center;
+}
+th {
+    background-color: #FFDAB9;
+    color: grey;
+    font-weight: bold;
+    font-size: 15pt;
+}

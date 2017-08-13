@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html>
+<meta charset="UTF-8">
+<title>Phonebook</title>
+<link rel="stylesheet" type="text/css" href="css/reset.css">
+<link rel="stylesheet" type="text/css" href="css/style.css">
+<link rel="stylesheet" href="node_modules/angular-material/angular-material.min.css">
+</head>
+<body ng-app="phonebook">
+    <div ng-controller="PhonebookController" id="wrapper" md-theme="MyTheme" >
+
+        <div class="title">Phonebook</div>
+
+            <div  class="addContact">
+                <div layout-gt-sm="row" >
+                <md-input-container class="md-block md-primary md-hue-1" flex-gt-sm>
+                    <label>Enter first name</label>
+                    <input ng-model="firstName">
+                </md-input-container>
+
+                <md-input-container class="md-block md-primary md-hue-1" flex-gt-sm>
+                    <label >Enter last name</label>
+                    <input ng-model="lastName">
+                </md-input-container>
+                <md-input-container  class="md-block md-primary md-hue-1" flex-gt-sm>
+                    <label>Enter phone number</label>
+                    <input ng-model="phoneNumber">
+                </md-input-container>
+                </div>
+
+
+            </div>
+            <button class="myButton" ng-click="Add($event)">Add</button>
+<div class="search">
+        <md-input-container class="md-block md-primary md-hue-2"  flex-gt-sm>
+            <label>Search</label>
+            <input ng-model="search">
+        </md-input-container>
+</div>
+        <table>
+            <tr>
+                <th>First name</th>
+                <th>Last name</th>
+                <th>Phone number</th>
+                <th>Action</th>
+            </tr>
+            <tr ng-repeat="person in persons  | filter: search track by $index">
+                <td>{{person.name}}</td>
+                <td>{{person.sname}}</td>
+                <td>{{person.phone}}</td>
+                <td>
+                    <md-checkbox class="md-primary md-hue-2" ng-model="person.remove"></md-checkbox></td>
+            </tr>
+        </table>
+        <button class="myButton" ng-click="Remove()">Remove</button>
+</div>
+    <script src="node_modules/angular/angular.min.js"></script>
+    <script src="node_modules/angular-animate/angular-animate.js"></script>
+    <script src="node_modules/angular-aria/angular-aria.min.js"></script>
+    <script src="node_modules/angular-material/angular-material.min.js"></script>
+    <script type="text/javascript" src="js/app.js"></script>
+</body>
+</html>
